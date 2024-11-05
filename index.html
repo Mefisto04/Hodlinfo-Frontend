@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>r
+    <title>Hodlinfo - Top 10 Stocks</title>
+
+</head>
+
+<body>
+    <nav>
+        <h2>Hodlinfo</h2>
+    </nav>
+
+    <div class="container">
+
+        <div id="stockCard" class="stock-card w-full max-w-md">
+            <!-- Card Header -->
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 rounded-t-lg">
+                <div class="flex items-center justify-between">
+                    <h2 id="stockName" class="text-2xl">Select a stock to view details</h2>
+                    <span id="stockType" class="text-sm font-normal"></span>
+                </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-6 bg-white rounded-b-lg">
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Last Price -->
+                    <div class="col-span-2 flex justify-between items-center bg-blue-50 p-3 rounded-lg">
+                        <span class="text-blue-800 font-semibold">Last Price</span>
+                        <span id="lastPrice" class="text-2xl font-bold text-blue-600"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm text-gray-500">Open</span>
+                        <span id="openPrice" class="font-semibold"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm text-gray-500">Volume</span>
+                        <span id="volume" class="font-semibold"></span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-sm text-gray-500">Low</span>
+                        <span id="lowPrice" class="font-semibold text-red-500"></span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-sm text-gray-500">High</span>
+                        <span id="highPrice" class="font-semibold text-green-500"></span>
+                    </div>
+                </div>
+                <div class="mt-4 text-right text-xs text-gray-500">
+                    Last updated: <span id="lastUpdated"></span>
+                </div>
+            </div>
+        </div>
+
+        <h1>Top 10 Stocks</h1>
+
+        <div class="search-container">
+            <input type="search" class="search-input" placeholder="Search stocks..." id="searchInput" />
+            <button onclick="clearSearch()">Clear</button> <!-- Button to clear search -->
+        </div>
+
+        <table id="tickersTable">
+            <thead>
+                <tr>
+                    <th class="py-3 px-4 text-left text-gray-300">Name</th>
+                    <th class="py-3 px-4 text-left text-gray-300">Last Price</th>
+                    <th class="py-3 px-4 text-left text-gray-300">Buy</th>
+                    <th class="py-3 px-4 text-left text-gray-300">Sell</th>
+                    <th class="py-3 px-4 text-left text-gray-300">Volume</th>
+                    <th class="py-3 px-4 text-left text-gray-300">Base Unit</th>
+                    <th class="py-3 px-4 text-left text-gray-300">Open</th>
+                    <th class="py-3 px-4 text-left text-gray-300">Low</th>
+                    <th class="py-3 px-4 text-left text-gray-300">High</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="pagination">
+            <button onclick="prevPage()" id="prevButton" disabled>&laquo; Previous</button>
+            <span id="pageInfo">Page 1</span>
+            <button onclick="nextPage()" id="nextButton">Next &raquo;</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Hodlinfo. All rights reserved.</p>
+    </div>
+</body>
+
+</html>

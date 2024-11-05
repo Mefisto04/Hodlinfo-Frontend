@@ -1,0 +1,264 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #191d28;
+  color: #3dc6c1;
+  /* text color */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #3dc6c1;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 20px;
+  border: 1px solid #4a5568;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #4a5568;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+th {
+  background-color: #4a5568;
+  color: #3dc6c1;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+tr:hover {
+  background-color: #d1d1d1;
+  transform: scale(1.02);
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #4a5568;
+  background-color: #2d3748;
+  color: #f7fafc;
+  outline: none;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #4a5568;
+  color: #f7fafc;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.footer {
+  background-color: #2d3748;
+  padding: 10px;
+  color: #a0aec0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+nav {
+  background-color: #2d3748;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h2 {
+  color: #3dc6c1;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.stock-card {
+  display: flex;
+  align-items: center;
+  background-color: #2d3748;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stock-card img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.stock-card h2 {
+  font-size: 1.8em;
+  color: #3dc6c1;
+  margin: 0;
+}
+
+.stock-card p {
+  color: #f7fafc;
+  font-weight: bold;
+}
+
+#stockCard {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  max-width: 24rem;
+}
+
+#stockCard .bg-gradient {
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  color: white;
+  padding: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+#stockCard h2 {
+  font-size: 1.5rem;
+}
+
+#stockCard .text-sm {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+#stockCard .content {
+  padding: 1.5rem;
+  background-color: white;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+#stockCard .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#stockCard .col-span-2 {
+  grid-column: span 2;
+}
+
+/* Card Content Styles */
+#stockCard .bg-blue-50 {
+  background-color: #eff6ff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+#stockCard .text-blue-800 {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+#stockCard .text-2xl {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+#stockCard .text-gray-500 {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+#stockCard .font-semibold {
+  font-weight: 600;
+}
+
+#stockCard .text-red-500 {
+  color: #ef4444;
+}
+
+#stockCard .text-green-500 {
+  color: #10b981;
+}
+
+#stockCard .bg-gray-50 {
+  background-color: #f9fafb;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+#stockCard .text-green-600 {
+  color: #047857;
+}
+
+#stockCard .text-red-600 {
+  color: #dc2626;
+}
+
+#stockCard .mt-4 {
+  margin-top: 1rem;
+}
+
+#stockCard .text-right {
+  text-align: right;
+}
+
+#stockCard .text-xs {
+  font-size: 0.75rem;
+}
